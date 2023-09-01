@@ -22,7 +22,7 @@ struct Mail: View {
         Message(id: 5, title: "Hello!", content: "Hello!Nice to meet you!"),
     ]
     @State var isMenuOpen: Bool = false
-    
+    @ObservedObject var model = Model()
     init() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()

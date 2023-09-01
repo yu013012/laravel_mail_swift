@@ -18,6 +18,7 @@
 		AAEA96002AA0A62400BF8E26 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95FF2AA0A62400BF8E26 /* Mail.swift */; };
 		AAEA96022AA0AAE200BF8E26 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA96012AA0AAE200BF8E26 /* Register.swift */; };
 		AAEA96042AA0BC0900BF8E26 /* MEMO.rtf in Resources */ = {isa = PBXBuildFile; fileRef = AAEA96032AA0BC0900BF8E26 /* MEMO.rtf */; };
+		AAEA96062AA1720C00BF8E26 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA96052AA1720C00BF8E26 /* Model.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		AAEA95FF2AA0A62400BF8E26 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		AAEA96012AA0AAE200BF8E26 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
 		AAEA96032AA0BC0900BF8E26 /* MEMO.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = MEMO.rtf; sourceTree = "<group>"; };
+		AAEA96052AA1720C00BF8E26 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				AAEA95FF2AA0A62400BF8E26 /* Mail.swift */,
 				AAEA96012AA0AAE200BF8E26 /* Register.swift */,
 				AAEA96032AA0BC0900BF8E26 /* MEMO.rtf */,
+				AAEA96052AA1720C00BF8E26 /* Model.swift */,
 			);
 			path = laravel_mail;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				AAEA96002AA0A62400BF8E26 /* Mail.swift in Sources */,
 				AAEA95FE2AA0A60200BF8E26 /* Login.swift in Sources */,
 				AAEA95D62AA0729200BF8E26 /* ContentView.swift in Sources */,
+				AAEA96062AA1720C00BF8E26 /* Model.swift in Sources */,
 				AAEA95D42AA0729200BF8E26 /* laravel_mailApp.swift in Sources */,
 				AAEA96022AA0AAE200BF8E26 /* Register.swift in Sources */,
 			);
