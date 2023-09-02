@@ -11,18 +11,10 @@ struct Message: Identifiable {
     let id: Int
     let title: String
     let content: String
+    let time: String
 }
 
 struct Mail: View {
-    let messages: [Message] = [
-        Message(id: 1, title: "Hello!", content: "Hello!Nice to meet you!"),
-        Message(id: 2, title: "Hello!", content: "Hello!Nice to meet you!"),
-        Message(id: 3, title: "Hello!", content: "Hello!Nice to meet you!"),
-        Message(id: 4, title: "Hello!", content: "Hello!Nice to meet you!"),
-        Message(id: 5, title: "Hello!", content: "Hello!Nice to meet you!"),
-    ]
-    @State var isMenuOpen: Bool = false
-    @ObservedObject var model = Model()
     init() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()
@@ -34,6 +26,34 @@ struct Mail: View {
         UINavigationBar.appearance().compactAppearance = navigationBarAppearance
     }
     
+    @State private var isLogout: Bool = false
+    @State var isMenuOpen: Bool = false
+    @EnvironmentObject var model: Model
+    
+    var messages: [Message] {
+        // model.nameの値を取得してmessages配列を初期化
+        var message: [Message] = []
+        for element in model.mailArray {
+            if let jsonDict = element as? [String: Any] {
+                // JSONオブジェクトの解析
+                if let content = jsonDict["content"] as? String,
+                   var createdAtFormat = jsonDict["created_at_format"] as? String,
+                   let id = jsonDict["id"] as? Int,
+                   let name = jsonDict["name"] as? String
+                {
+                    let autoSend = jsonDict["auto_send"] as? String
+                    if autoSend != "", autoSend != nil {
+                        createdAtFormat = autoSend!
+                    }
+                    // 取り出した要素を使用して処理を行う
+                    message.append(Message(id: id, title: name, content: content, time: createdAtFormat))
+                }
+            }
+        }
+        return message
+    }
+    
+    
     var body: some View {
         NavigationView {
             VStack {
@@ -42,20 +62,11 @@ struct Mail: View {
                         .listRowSeparator(.hidden)
                 }
                 .listStyle(PlainListStyle())
+                NavigationLink(destination: Login(), isActive: $isLogout) {}
             }
             .navigationBarTitle("メール連絡網", displayMode: .inline)
             .navigationBarItems(leading: leadingBarItem)
-            .sheet(isPresented: $isMenuOpen, content: {
-                Button(action: {
-                    // MEMO ログアウト処理
-                }) {
-                    Text("ログアウト")
-                        .font(.system(size: 16))
-                        .foregroundColor(.black) // テキストの色を変更する
-                        .padding()
-                        .border(Color.gray, width: 1)
-                }
-            })
+            
         }
         .navigationBarHidden(true)
     }
@@ -68,6 +79,23 @@ struct Mail: View {
                 .imageScale(.large)
                 .foregroundColor(.white)
         }
+        .sheet(isPresented: $isMenuOpen, content: {
+            Button(action: {
+                model.fetchData(apiFlg: "logout")
+                isMenuOpen.toggle()
+                if (model.isLogin) {
+                    model.isLogin = false
+                } else {
+                    isLogout.toggle()
+                }
+            }) {
+                Text("ログアウト")
+                    .font(.system(size: 16))
+                    .foregroundColor(.black) // テキストの色を変更する
+                    .padding()
+                    .border(Color.gray, width: 1)
+            }
+        })
     }
 }
 
@@ -78,7 +106,6 @@ struct MessageView: View {
         VStack {
             HStack {
                 Text(self.message.title)
-                    .padding(.horizontal)
                     .foregroundColor(.black)
                 Spacer()
             }
@@ -91,14 +118,20 @@ struct MessageView: View {
                     .foregroundColor(.black)
                     .cornerRadius(8)
                 Spacer()
+                Spacer()
             }
             .padding(.horizontal)
-        }
+            HStack {
+                Text(self.message.time)
+                Spacer()
+            }
+            .padding(.horizontal)
+        }.padding()
     }
 }
 
 struct Mail_Previews: PreviewProvider {
     static var previews: some View {
-        Mail()
+        Mail().environmentObject(Model())
     }
 }

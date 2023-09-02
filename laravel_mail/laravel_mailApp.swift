@@ -7,11 +7,14 @@
 
 import SwiftUI
 
+// MEMOアプリケーション起動時に@mainが読み込まれる
 @main
 struct laravel_mailApp: App {
+    let model = Model()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(model)
         }
     }
 }

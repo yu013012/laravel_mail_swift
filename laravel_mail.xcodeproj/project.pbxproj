@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AA7ED7FB2AA22253003DEA33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7ED7FA2AA22253003DEA33 /* Constants.swift */; };
 		AAEA95D42AA0729200BF8E26 /* laravel_mailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95D32AA0729200BF8E26 /* laravel_mailApp.swift */; };
 		AAEA95D62AA0729200BF8E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95D52AA0729200BF8E26 /* ContentView.swift */; };
 		AAEA95D82AA0729400BF8E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEA95D72AA0729400BF8E26 /* Assets.xcassets */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AA7ED7FA2AA22253003DEA33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		AA8A90CD2AA241D900E7B789 /* laravel-mail-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "laravel-mail-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AAEA95D02AA0729200BF8E26 /* laravel_mail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laravel_mail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA95D32AA0729200BF8E26 /* laravel_mailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailApp.swift; sourceTree = "<group>"; };
 		AAEA95D52AA0729200BF8E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,6 +107,7 @@
 		AAEA95D22AA0729200BF8E26 /* laravel_mail */ = {
 			isa = PBXGroup;
 			children = (
+				AA8A90CD2AA241D900E7B789 /* laravel-mail-Info.plist */,
 				AAEA95D32AA0729200BF8E26 /* laravel_mailApp.swift */,
 				AAEA95D52AA0729200BF8E26 /* ContentView.swift */,
 				AAEA95D72AA0729400BF8E26 /* Assets.xcassets */,
@@ -113,6 +117,7 @@
 				AAEA96012AA0AAE200BF8E26 /* Register.swift */,
 				AAEA96032AA0BC0900BF8E26 /* MEMO.rtf */,
 				AAEA96052AA1720C00BF8E26 /* Model.swift */,
+				AA7ED7FA2AA22253003DEA33 /* Constants.swift */,
 			);
 			path = laravel_mail;
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 				AAEA95FE2AA0A60200BF8E26 /* Login.swift in Sources */,
 				AAEA95D62AA0729200BF8E26 /* ContentView.swift in Sources */,
 				AAEA96062AA1720C00BF8E26 /* Model.swift in Sources */,
+				AA7ED7FB2AA22253003DEA33 /* Constants.swift in Sources */,
 				AAEA95D42AA0729200BF8E26 /* laravel_mailApp.swift in Sources */,
 				AAEA96022AA0AAE200BF8E26 /* Register.swift in Sources */,
 			);
@@ -440,12 +446,13 @@
 				DEVELOPMENT_TEAM = 56WF938799;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "laravel-mail-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -470,12 +477,13 @@
 				DEVELOPMENT_TEAM = 56WF938799;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "laravel-mail-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

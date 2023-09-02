@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var loginFlg: Bool = false
-    @State private var mailFlg: Bool = false
+    @State private var isLogin: Bool = false
+    @State private var isMail: Bool = false
+    @EnvironmentObject var model: Model
     
     var body: some View {
         // MEMO NavigationView NavigationLinkはセット
         NavigationView {
             VStack {
-                NavigationLink(destination: Mail(), isActive: $mailFlg) {
+                NavigationLink(destination: Mail(), isActive: $isMail) {
                     EmptyView()
                 }
-                NavigationLink(destination: Login(), isActive: $loginFlg) {
+                NavigationLink(destination: Login(), isActive: $isLogin) {
                     EmptyView()
                 }
             }
         }
         // MEMO これをやると起動時に呼び出される
         .onAppear {
-            if UserDefaults.standard.string(forKey: "token") != nil {
-                mailFlg = true
+            if UserDefaults.standard.string(forKey: "token") != "", UserDefaults.standard.string(forKey: "token") != nil {
+                model.token = UserDefaults.standard.string(forKey: "token") ?? ""
+                model.fetchData(apiFlg: "mail")
+                isMail.toggle()
             } else {
-                loginFlg = true
+                isLogin = true
             }
         }
     }
@@ -36,6 +39,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(Model())
     }
 }

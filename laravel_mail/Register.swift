@@ -8,13 +8,8 @@
 import SwiftUI
 
 struct Register: View {
-    @State private var name: String = ""
-    @State private var email: String = ""
-    @State private var password: String = ""
-    @State private var password_confirm: String = ""
-    @State private var isRegister: Bool = false
-    @State private var isBack: Bool = false
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var model: Model
     
     init() {
         let navigationBarAppearance = UINavigationBarAppearance()
@@ -32,38 +27,35 @@ struct Register: View {
             VStack {
                 Text("新規登録").font(.system(size: 40)).padding(.bottom, 50)
                 
-                TextField("名前", text: $name)
+                TextField("名前", text: $model.name)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                     .autocapitalization(.none)
                 
-                TextField("メールアドレス", text: $email)
+                TextField("メールアドレス", text: $model.mail)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                     .autocapitalization(.none)
                 
-                SecureField("パスワード", text: $password)
+                SecureField("パスワード", text: $model.password)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                 
-                SecureField("確認用パスワード", text: $password_confirm)
+                SecureField("確認用パスワード", text: $model.password_confirm)
                     .padding()
                     .background(Color.gray.opacity(0.2))
                     .cornerRadius(10)
                     .padding(.horizontal, 20)
                 
-                NavigationLink(destination: Mail(), isActive: $isRegister) {
+                NavigationLink(destination: Mail(), isActive: $model.isRegister) {
                     Button(action: {
-                        // ログイン処理を実行すると仮定
-                        // ここでは単にログイン状態を更新するだけとします
-                        isRegister.toggle()
-                        saveToken()
+                        model.fetchData(apiFlg: "register")
                     }) {
                         HStack {
                             Spacer()
@@ -79,6 +71,7 @@ struct Register: View {
                     }
                     .padding(.top, 20)
                 }
+                
                 Button(action: {
                     presentationMode.wrappedValue.dismiss()
                 }) {
@@ -93,14 +86,10 @@ struct Register: View {
         }
         .navigationBarHidden(true)
     }
-    private func saveToken() {
-        // APIで帰ってきたトークンを保存する
-        UserDefaults.standard.set("test", forKey: "token")
-    }
 }
 
 struct Register_Previews: PreviewProvider {
     static var previews: some View {
-        Register()
+        Register().environmentObject(Model())
     }
 }
