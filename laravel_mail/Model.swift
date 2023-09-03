@@ -1,6 +1,6 @@
 //
 //  Model.swift
-//  laravel_mail
+//  larav
 //
 //  Created by 丹羽悠 on 2023/09/01.
 //

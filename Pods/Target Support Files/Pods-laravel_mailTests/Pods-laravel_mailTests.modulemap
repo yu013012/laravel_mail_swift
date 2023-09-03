@@ -1,0 +1,6 @@
+framework module Pods_laravel_mailTests {
+  umbrella header "Pods-laravel_mailTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
