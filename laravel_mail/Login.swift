@@ -70,18 +70,6 @@ struct Login: View {
                     }
                     
                 }
-                .alert(isPresented: $model.error) {
-                    Alert(
-                        title: Text("エラー"),
-                        message: Text("エラーが発生しました。"),
-                        dismissButton: .default(
-                            Text("閉じる"),
-                            action: {
-                                model.error = false
-                            }
-                        )
-                    )
-                }
                 .navigationBarTitle("メール連絡網", displayMode: .inline)
             }
         }

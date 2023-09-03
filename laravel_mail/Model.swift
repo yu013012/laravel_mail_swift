@@ -61,10 +61,14 @@ class Model: ObservableObject {
             
             if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode != 200 {
-                    print("エラー: \(httpResponse.statusCode)")
-                    self.error = true
-                    self.saveToken(token: "")
-                    return
+                    // MEMO 画面の変更だったり変数の変更は下記で行わなければならない
+                    // バックグラウンドか、メインスレッドかの違い
+                    DispatchQueue.main.async {
+                        print("エラー: \(httpResponse.statusCode)")
+                        self.error = true
+                        self.saveToken(token: "")
+                        return
+                    }
                 }
             }
 
@@ -99,7 +103,7 @@ class Model: ObservableObject {
                     self.isLogin = true
                     self.fetchData(apiFlg: "mail")
                 } else {
-                    self.error.toggle()
+                    self.error = true
                 }
             case "register":
                 if let token = json["data"] as? String {
@@ -108,27 +112,27 @@ class Model: ObservableObject {
                     self.isRegister = true
                     self.fetchData(apiFlg: "mail")
                 } else {
-                    self.error.toggle()
+                    self.error = true
                 }
             case "mail":
                 if let dataArray = json["data"] as? NSArray {
                     self.mailArray = dataArray as! [[String : Any]]
                 } else {
-                    self.error.toggle()
+                    self.error = true
                 }
             case "logout":
                 if let token = json["data"] as? String {
                     self.saveToken(token: "")
                 } else {
-                    self.error.toggle()
+                    self.error = true
                 }
             case "fcm":
                 if let token = json["data"] as? String {
                 } else {
-                    self.error.toggle()
+                    self.error = true
                 }
             default:
-                self.error.toggle()
+                self.error = true
         }
     }
     
@@ -146,7 +150,7 @@ class Model: ObservableObject {
                 return Constants.apiUrl + "fcm_token?fcm_token=\(self.fcm_token)"
             default:
                 return ""
-                self.error.toggle()
+                self.error = true
         }
     }
     

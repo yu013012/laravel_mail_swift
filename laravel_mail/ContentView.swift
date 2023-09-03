@@ -22,8 +22,22 @@ struct ContentView: View {
                 NavigationLink(destination: Login(), isActive: $isLogin) {
                     EmptyView()
                 }
+                .alert(isPresented: $model.error) {
+                    Alert(
+                        title: Text("エラー"),
+                        message: Text("エラーが発生しました。"),
+                        dismissButton: .default(
+                            Text("閉じる"),
+                            action: {
+                                model.error = false
+                            }
+                        )
+                    )
+                }
             }
+            
         }
+        
         // MEMO これをやると起動時に呼び出される
         .onAppear {
             if UserDefaults.standard.string(forKey: "token") != "", UserDefaults.standard.string(forKey: "token") != nil {
