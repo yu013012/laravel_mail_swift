@@ -76,7 +76,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     }
 }
 
-// MEMOアプリケーション起動時に@mainが読み込まれる
+// MEMO アプリケーション起動時に@mainが読み込まれる
 @main
 struct laravel_mailApp: App {
   let model = Model()
