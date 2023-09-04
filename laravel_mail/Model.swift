@@ -37,12 +37,11 @@ class Model: ObservableObject {
         }
         
         // リクエストを作成
-        // MEMO !をつけていてnilだった場合エラーになるから対策をする
+        // MEMO !をつけていてnilだった場合エラーになるからその前に対策をする
         var request = URLRequest(url: apiUrl!)
 
         // ヘッダーを追加
         request.addValue("Bearer \(self.token)", forHTTPHeaderField: "Authorization")
-        //request.addValue("application/json", forHTTPHeaderField: "Content-Type")
 
         // HTTPメソッドを設定（GET、POST、PUT、DELETEなど）
         request.httpMethod = "GET"
@@ -54,8 +53,10 @@ class Model: ObservableObject {
         let task = session.dataTask(with: request) { (data, response, error) in
             if let error = error {
                 print("エラー: \(error)")
-                self.error = true
-                self.saveToken(token: "")
+                DispatchQueue.main.async {
+                    self.error = true
+                    self.saveToken(token: "")
+                }
                 return
             }
             
@@ -77,19 +78,22 @@ class Model: ObservableObject {
                 print("レスポンスデータ: \(data)")
                 do {
                     if let json = try JSONSerialization.jsonObject(with: data, options: []) as? [String: Any] {
-                        self.switchJson(flg: apiFlg,json: json)
+                        self.switchJson(flg: apiFlg, json: json)
                     } else {
-                        self.error = true
-                        self.saveToken(token: "")
+                        DispatchQueue.main.async {
+                            self.error = true
+                            self.saveToken(token: "")
+                        }
                     }
                 } catch {
-                    self.error = true
-                    self.saveToken(token: "")
-                    print("JSONデコードエラー: \(error)")
+                    DispatchQueue.main.async {
+                        self.error = true
+                        self.saveToken(token: "")
+                        print("JSONデコードエラー: \(error)")
+                    }
                 }
             }
         }
-
         // リクエストを実行
         task.resume()
     }
@@ -97,42 +101,61 @@ class Model: ObservableObject {
     func switchJson(flg: String, json: [String : Any]) {
         switch flg {
             case "login":
-                if let token = json["data"] as? String {
-                    self.token = token as String
-                    self.saveToken(token: token)
-                    self.isLogin = true
-                    self.fetchData(apiFlg: "mail")
-                } else {
-                    self.error = true
+                DispatchQueue.main.async {
+                    if let token = json["data"] as? String {
+                        self.token = token as String
+                        self.saveToken(token: token)
+                        self.isLogin = true
+                        self.fetchData(apiFlg: "mail")
+                    } else {
+                        self.error = true
+                        self.saveToken(token: "")
+                    }
                 }
+            
             case "register":
-                if let token = json["data"] as? String {
-                    self.token = token as String
-                    self.saveToken(token: token)
-                    self.isRegister = true
-                    self.fetchData(apiFlg: "mail")
-                } else {
-                    self.error = true
+                DispatchQueue.main.async {
+                    if let token = json["data"] as? String {
+                        self.token = token as String
+                        self.saveToken(token: token)
+                        self.isRegister = true
+                        self.fetchData(apiFlg: "mail")
+                    } else {
+                        self.error = true
+                    }
                 }
+                
             case "mail":
-                if let dataArray = json["data"] as? NSArray {
-                    self.mailArray = dataArray as! [[String : Any]]
-                } else {
-                    self.error = true
+                DispatchQueue.main.async {
+                    if let dataArray = json["data"] as? NSArray {
+                        self.mailArray = dataArray as! [[String : Any]]
+                    } else {
+                        self.error = true
+                    }
                 }
             case "logout":
-                if let token = json["data"] as? String {
-                    self.saveToken(token: "")
-                } else {
-                    self.error = true
+                DispatchQueue.main.async {
+                    if json["data"] is String {
+                        self.saveToken(token: "")
+                    } else {
+                        self.saveToken(token: "")
+                        self.error = true
+                    }
                 }
-            case "fcm":
-                if let token = json["data"] as? String {
-                } else {
-                    self.error = true
+                
+            case "fcm_token":
+                DispatchQueue.main.async {
+                    guard json["data"] is String else {
+                        self.error = true
+                        return
+                    }
                 }
+            
             default:
-                self.error = true
+                DispatchQueue.main.async {
+                    self.saveToken(token: "")
+                    self.error = true
+                }
         }
     }
     
@@ -149,13 +172,27 @@ class Model: ObservableObject {
             case "fcm_token":
                 return Constants.apiUrl + "fcm_token?fcm_token=\(self.fcm_token)"
             default:
+                DispatchQueue.main.async {
+                    self.error = true
+                    self.saveToken(token: "")
+                }
                 return ""
-                self.error = true
         }
     }
     
     func saveToken(token: String) {
         // APIで帰ってきたトークンを保存する
         UserDefaults.standard.set(token, forKey: "token")
+    }
+    
+    func saveFcmToken(token: String) {
+        // MEMO guard else これはif文の最初の処理がないときに使おう
+        guard UserDefaults.standard.string(forKey: "fcm_token") != nil, UserDefaults.standard.string(forKey: "fcm_token") != "" else {
+            UserDefaults.standard.set(token, forKey: "fcm_token")
+            self.fcm_token = token
+            self.token = UserDefaults.standard.string(forKey: "token") ?? ""
+            self.fetchData(apiFlg: "fcm_token")
+            return
+        }
     }
 }

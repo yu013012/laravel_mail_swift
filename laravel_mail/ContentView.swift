@@ -25,7 +25,7 @@ struct ContentView: View {
                 .alert(isPresented: $model.error) {
                     Alert(
                         title: Text("エラー"),
-                        message: Text("エラーが発生しました。"),
+                        message: Text("エラーが発生しました。アプリを終了して再度お試しください。"),
                         dismissButton: .default(
                             Text("閉じる"),
                             action: {

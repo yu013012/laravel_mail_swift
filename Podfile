@@ -6,8 +6,8 @@ target 'laravel_mail' do
   use_frameworks!
 #  pod 'Firebase/Core'
 #  pod 'Firebase/Messaging'
-pod 'Firebase/Analytics'
-pod 'Firebase/Messaging'
+#pod 'Firebase/Analytics'
+#pod 'Firebase/Messaging'
   # Pods for laravel_mail
 
   target 'laravel_mailTests' do
