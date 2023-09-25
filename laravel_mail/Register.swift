@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Register: View {
+    // 環境変数から戻るために定義
     @Environment(\.presentationMode) private var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var model: Model
     

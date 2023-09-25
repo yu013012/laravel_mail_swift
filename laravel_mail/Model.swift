@@ -17,6 +17,7 @@ class Model: ObservableObject {
     @Published var error: Bool = false
     @Published var isLogin: Bool = false
     @Published var isRegister: Bool = false
+    // keyがString、値がAnyということ
     @Published var mailArray: [ [String: Any] ] = []
 
     func fetchData(apiFlg: String) {
@@ -127,6 +128,7 @@ class Model: ObservableObject {
                 
             case "mail":
                 DispatchQueue.main.async {
+                    // この条件で型変換に成功しているので中身の処理はas!となる
                     if let dataArray = json["data"] as? NSArray {
                         self.mailArray = dataArray as! [[String : Any]]
                     } else {

@@ -1,4 +1,0 @@
-module FirebaseCore {
-  export *
-  header "Firebase.h"
-}
