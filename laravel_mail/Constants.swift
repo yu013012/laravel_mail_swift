@@ -9,5 +9,5 @@ import Foundation
 
 struct Constants {
     static let welcomeMessage = "Welcome to My App"
-    static let apiUrl = "http://ec2-18-183-167-84.ap-northeast-1.compute.amazonaws.com/api/"
+    static let apiUrl = "https://bearingsystem.x0.to/api/"
 }

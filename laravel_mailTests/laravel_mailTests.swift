@@ -2,11 +2,10 @@
 //  laravel_mailTests.swift
 //  laravel_mailTests
 //
-//  Created by 丹羽悠 on 2023/08/31.
+//  Created by 丹羽悠 on 2023/11/02.
 //
 
 import XCTest
-@testable import laravel_mail
 
 final class laravel_mailTests: XCTestCase {
 
@@ -28,7 +27,7 @@ final class laravel_mailTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }

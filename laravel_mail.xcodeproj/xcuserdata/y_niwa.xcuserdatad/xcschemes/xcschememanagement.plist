@@ -25,10 +25,43 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>UITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>h.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>8</integer>
+		</dict>
 		<key>laravel_mail.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>AA5248422AF359B700C41022</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAEA95CF2AA0729200BF8E26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAEA95DF2AA0729400BF8E26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>AAEA95E92AA0729400BF8E26</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

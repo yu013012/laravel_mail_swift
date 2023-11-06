@@ -7,20 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0D6B88D2D4270798091DEB63 /* Pods_laravel_mailTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8C452100EE9E07139438AC8E /* Pods_laravel_mailTests.framework */; };
 		5C96D6766B46E1365AA1E4E7 /* Pods_laravel_mail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD7FFA865C87412DADE1AF55 /* Pods_laravel_mail.framework */; };
-		A6474F0AECF2F735E26ADA2D /* Pods_laravel_mail_laravel_mailUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139A54CE338DE995902BC391 /* Pods_laravel_mail_laravel_mailUITests.framework */; };
 		AA0D7D152AA57D870043FDB9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = AA0D7D142AA57D860043FDB9 /* GoogleService-Info.plist */; };
 		AA0D7D172AA5918C0043FDB9 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AA0D7D162AA5918C0043FDB9 /* FirebaseMessaging */; };
 		AA7ED7FB2AA22253003DEA33 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA7ED7FA2AA22253003DEA33 /* Constants.swift */; };
 		AA8A90D22AA43C1B00E7B789 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AA8A90D12AA43C1B00E7B789 /* FirebaseAnalytics */; };
+		AAD487652AF6AAB700B13D94 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = AAD487642AF6AAB700B13D94 /* FirebaseAnalytics */; };
+		AAD487672AF6AAB700B13D94 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = AAD487662AF6AAB700B13D94 /* FirebaseMessaging */; };
+		AADD2E702AF36D0100D66642 /* laravel_mailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD2E6F2AF36D0100D66642 /* laravel_mailUITests.swift */; };
+		AADD2E722AF36D0100D66642 /* laravel_mailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD2E712AF36D0100D66642 /* laravel_mailUITestsLaunchTests.swift */; };
+		AADD2E7F2AF36D5200D66642 /* laravel_mailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AADD2E7E2AF36D5200D66642 /* laravel_mailTests.swift */; };
 		AAEA95D42AA0729200BF8E26 /* laravel_mailApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95D32AA0729200BF8E26 /* laravel_mailApp.swift */; };
 		AAEA95D62AA0729200BF8E26 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95D52AA0729200BF8E26 /* ContentView.swift */; };
 		AAEA95D82AA0729400BF8E26 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEA95D72AA0729400BF8E26 /* Assets.xcassets */; };
 		AAEA95DB2AA0729400BF8E26 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AAEA95DA2AA0729400BF8E26 /* Preview Assets.xcassets */; };
-		AAEA95E52AA0729400BF8E26 /* laravel_mailTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95E42AA0729400BF8E26 /* laravel_mailTests.swift */; };
-		AAEA95EF2AA0729400BF8E26 /* laravel_mailUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95EE2AA0729400BF8E26 /* laravel_mailUITests.swift */; };
-		AAEA95F12AA0729400BF8E26 /* laravel_mailUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95F02AA0729400BF8E26 /* laravel_mailUITestsLaunchTests.swift */; };
 		AAEA95FE2AA0A60200BF8E26 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95FD2AA0A60200BF8E26 /* Login.swift */; };
 		AAEA96002AA0A62400BF8E26 /* Mail.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA95FF2AA0A62400BF8E26 /* Mail.swift */; };
 		AAEA96022AA0AAE200BF8E26 /* Register.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAEA96012AA0AAE200BF8E26 /* Register.swift */; };
@@ -29,14 +29,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		AAEA95E12AA0729400BF8E26 /* PBXContainerItemProxy */ = {
+		AADD2E732AF36D0100D66642 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AAEA95C82AA0729200BF8E26 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = AAEA95CF2AA0729200BF8E26;
 			remoteInfo = laravel_mail;
 		};
-		AAEA95EB2AA0729400BF8E26 /* PBXContainerItemProxy */ = {
+		AADD2E802AF36D5200D66642 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = AAEA95C82AA0729200BF8E26 /* Project object */;
 			proxyType = 1;
@@ -52,19 +52,26 @@
 		6C42A9E5E10C44F24740801F /* Pods-laravel_mailTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-laravel_mailTests.release.xcconfig"; path = "Target Support Files/Pods-laravel_mailTests/Pods-laravel_mailTests.release.xcconfig"; sourceTree = "<group>"; };
 		8C452100EE9E07139438AC8E /* Pods_laravel_mailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_laravel_mailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA0D7D142AA57D860043FDB9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		AA5248512AF3651100C41022 /* Pods_laravel_mail_laravel_mailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_laravel_mail_laravel_mailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA5248542AF3651500C41022 /* Pods_laravel_mailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_laravel_mailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA7ED7FA2AA22253003DEA33 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		AA8A90CD2AA241D900E7B789 /* laravel-mail-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "laravel-mail-Info.plist"; sourceTree = SOURCE_ROOT; };
 		AAAC68B62AA4A1CB0072AB59 /* laravel_mail.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = laravel_mail.entitlements; sourceTree = "<group>"; };
+		AACBAEC82AF377EA0052B8BB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Platforms/iPhoneOS.platform/Developer/Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		AACBAECC2AF379D00052B8BB /* CoreAudioTypes.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudioTypes.framework; path = System/Library/Frameworks/CoreAudioTypes.framework; sourceTree = SDKROOT; };
+		AADD2E6D2AF36D0100D66642 /* laravel_mailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = laravel_mailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADD2E6F2AF36D0100D66642 /* laravel_mailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailUITests.swift; sourceTree = "<group>"; };
+		AADD2E712AF36D0100D66642 /* laravel_mailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AADD2E7C2AF36D5100D66642 /* laravel_mailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = laravel_mailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADD2E7E2AF36D5200D66642 /* laravel_mailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailTests.swift; sourceTree = "<group>"; };
+		AADD2E852AF36E4200D66642 /* Pods_laravel_mailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_laravel_mailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADD2E892AF36E4F00D66642 /* Pods_laravel_mail_laravel_mailUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_laravel_mail_laravel_mailUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AADD2E952AF36E6D00D66642 /* Pods_laravel_mailTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_laravel_mailTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA95D02AA0729200BF8E26 /* laravel_mail.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = laravel_mail.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AAEA95D32AA0729200BF8E26 /* laravel_mailApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailApp.swift; sourceTree = "<group>"; };
 		AAEA95D52AA0729200BF8E26 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AAEA95D72AA0729400BF8E26 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AAEA95DA2AA0729400BF8E26 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		AAEA95E02AA0729400BF8E26 /* laravel_mailTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = laravel_mailTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAEA95E42AA0729400BF8E26 /* laravel_mailTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailTests.swift; sourceTree = "<group>"; };
-		AAEA95EA2AA0729400BF8E26 /* laravel_mailUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = laravel_mailUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		AAEA95EE2AA0729400BF8E26 /* laravel_mailUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailUITests.swift; sourceTree = "<group>"; };
-		AAEA95F02AA0729400BF8E26 /* laravel_mailUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = laravel_mailUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		AAEA95FD2AA0A60200BF8E26 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		AAEA95FF2AA0A62400BF8E26 /* Mail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mail.swift; sourceTree = "<group>"; };
 		AAEA96012AA0AAE200BF8E26 /* Register.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Register.swift; sourceTree = "<group>"; };
@@ -77,6 +84,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		AADD2E6A2AF36D0100D66642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AAD487672AF6AAB700B13D94 /* FirebaseMessaging in Frameworks */,
+				AAD487652AF6AAB700B13D94 /* FirebaseAnalytics in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADD2E792AF36D5100D66642 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAEA95CD2AA0729200BF8E26 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -84,22 +107,6 @@
 				AA0D7D172AA5918C0043FDB9 /* FirebaseMessaging in Frameworks */,
 				AA8A90D22AA43C1B00E7B789 /* FirebaseAnalytics in Frameworks */,
 				5C96D6766B46E1365AA1E4E7 /* Pods_laravel_mail.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAEA95DD2AA0729400BF8E26 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0D6B88D2D4270798091DEB63 /* Pods_laravel_mailTests.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAEA95E72AA0729400BF8E26 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A6474F0AECF2F735E26ADA2D /* Pods_laravel_mail_laravel_mailUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +129,13 @@
 		3C0BC7A31CBF893284E0FFCF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AACBAECC2AF379D00052B8BB /* CoreAudioTypes.framework */,
+				AACBAEC82AF377EA0052B8BB /* XCTest.framework */,
+				AADD2E952AF36E6D00D66642 /* Pods_laravel_mailTests.framework */,
+				AADD2E892AF36E4F00D66642 /* Pods_laravel_mail_laravel_mailUITests.framework */,
+				AADD2E852AF36E4200D66642 /* Pods_laravel_mailTests.framework */,
+				AA5248542AF3651500C41022 /* Pods_laravel_mailTests.framework */,
+				AA5248512AF3651100C41022 /* Pods_laravel_mail_laravel_mailUITests.framework */,
 				CD7FFA865C87412DADE1AF55 /* Pods_laravel_mail.framework */,
 				139A54CE338DE995902BC391 /* Pods_laravel_mail_laravel_mailUITests.framework */,
 				8C452100EE9E07139438AC8E /* Pods_laravel_mailTests.framework */,
@@ -129,12 +143,29 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		AADD2E6E2AF36D0100D66642 /* laravel_mailUITests */ = {
+			isa = PBXGroup;
+			children = (
+				AADD2E6F2AF36D0100D66642 /* laravel_mailUITests.swift */,
+				AADD2E712AF36D0100D66642 /* laravel_mailUITestsLaunchTests.swift */,
+			);
+			path = laravel_mailUITests;
+			sourceTree = "<group>";
+		};
+		AADD2E7D2AF36D5200D66642 /* laravel_mailTests */ = {
+			isa = PBXGroup;
+			children = (
+				AADD2E7E2AF36D5200D66642 /* laravel_mailTests.swift */,
+			);
+			path = laravel_mailTests;
+			sourceTree = "<group>";
+		};
 		AAEA95C72AA0729200BF8E26 = {
 			isa = PBXGroup;
 			children = (
 				AAEA95D22AA0729200BF8E26 /* laravel_mail */,
-				AAEA95E32AA0729400BF8E26 /* laravel_mailTests */,
-				AAEA95ED2AA0729400BF8E26 /* laravel_mailUITests */,
+				AADD2E6E2AF36D0100D66642 /* laravel_mailUITests */,
+				AADD2E7D2AF36D5200D66642 /* laravel_mailTests */,
 				AAEA95D12AA0729200BF8E26 /* Products */,
 				273A28E95FC8A44BE9944FAB /* Pods */,
 				3C0BC7A31CBF893284E0FFCF /* Frameworks */,
@@ -145,8 +176,8 @@
 			isa = PBXGroup;
 			children = (
 				AAEA95D02AA0729200BF8E26 /* laravel_mail.app */,
-				AAEA95E02AA0729400BF8E26 /* laravel_mailTests.xctest */,
-				AAEA95EA2AA0729400BF8E26 /* laravel_mailUITests.xctest */,
+				AADD2E6D2AF36D0100D66642 /* laravel_mailUITests.xctest */,
+				AADD2E7C2AF36D5100D66642 /* laravel_mailTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,26 +210,53 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		AAEA95E32AA0729400BF8E26 /* laravel_mailTests */ = {
-			isa = PBXGroup;
-			children = (
-				AAEA95E42AA0729400BF8E26 /* laravel_mailTests.swift */,
-			);
-			path = laravel_mailTests;
-			sourceTree = "<group>";
-		};
-		AAEA95ED2AA0729400BF8E26 /* laravel_mailUITests */ = {
-			isa = PBXGroup;
-			children = (
-				AAEA95EE2AA0729400BF8E26 /* laravel_mailUITests.swift */,
-				AAEA95F02AA0729400BF8E26 /* laravel_mailUITestsLaunchTests.swift */,
-			);
-			path = laravel_mailUITests;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		AADD2E6C2AF36D0100D66642 /* laravel_mailUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADD2E772AF36D0100D66642 /* Build configuration list for PBXNativeTarget "laravel_mailUITests" */;
+			buildPhases = (
+				5FD61998D42284E14A7F5301 /* [CP] Check Pods Manifest.lock */,
+				AADD2E692AF36D0100D66642 /* Sources */,
+				AADD2E6A2AF36D0100D66642 /* Frameworks */,
+				AADD2E6B2AF36D0100D66642 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADD2E742AF36D0100D66642 /* PBXTargetDependency */,
+			);
+			name = laravel_mailUITests;
+			packageProductDependencies = (
+				AAD487642AF6AAB700B13D94 /* FirebaseAnalytics */,
+				AAD487662AF6AAB700B13D94 /* FirebaseMessaging */,
+			);
+			productName = laravel_mailUITests;
+			productReference = AADD2E6D2AF36D0100D66642 /* laravel_mailUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		AADD2E7B2AF36D5100D66642 /* laravel_mailTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AADD2E822AF36D5200D66642 /* Build configuration list for PBXNativeTarget "laravel_mailTests" */;
+			buildPhases = (
+				71E815B8126371984C190D4C /* [CP] Check Pods Manifest.lock */,
+				AADD2E782AF36D5100D66642 /* Sources */,
+				AADD2E792AF36D5100D66642 /* Frameworks */,
+				AADD2E7A2AF36D5100D66642 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AADD2E812AF36D5200D66642 /* PBXTargetDependency */,
+			);
+			name = laravel_mailTests;
+			packageProductDependencies = (
+			);
+			productName = laravel_mailTests;
+			productReference = AADD2E7C2AF36D5100D66642 /* laravel_mailTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		AAEA95CF2AA0729200BF8E26 /* laravel_mail */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = AAEA95F42AA0729500BF8E26 /* Build configuration list for PBXNativeTarget "laravel_mail" */;
@@ -221,44 +279,6 @@
 			productReference = AAEA95D02AA0729200BF8E26 /* laravel_mail.app */;
 			productType = "com.apple.product-type.application";
 		};
-		AAEA95DF2AA0729400BF8E26 /* laravel_mailTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AAEA95F72AA0729500BF8E26 /* Build configuration list for PBXNativeTarget "laravel_mailTests" */;
-			buildPhases = (
-				9D2A4225FC623B89D62BF39D /* [CP] Check Pods Manifest.lock */,
-				AAEA95DC2AA0729400BF8E26 /* Sources */,
-				AAEA95DD2AA0729400BF8E26 /* Frameworks */,
-				AAEA95DE2AA0729400BF8E26 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AAEA95E22AA0729400BF8E26 /* PBXTargetDependency */,
-			);
-			name = laravel_mailTests;
-			productName = laravel_mailTests;
-			productReference = AAEA95E02AA0729400BF8E26 /* laravel_mailTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		AAEA95E92AA0729400BF8E26 /* laravel_mailUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = AAEA95FA2AA0729500BF8E26 /* Build configuration list for PBXNativeTarget "laravel_mailUITests" */;
-			buildPhases = (
-				E474E34E085057205C0C0D81 /* [CP] Check Pods Manifest.lock */,
-				AAEA95E62AA0729400BF8E26 /* Sources */,
-				AAEA95E72AA0729400BF8E26 /* Frameworks */,
-				AAEA95E82AA0729400BF8E26 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				AAEA95EC2AA0729400BF8E26 /* PBXTargetDependency */,
-			);
-			name = laravel_mailUITests;
-			productName = laravel_mailUITests;
-			productReference = AAEA95EA2AA0729400BF8E26 /* laravel_mailUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -266,19 +286,19 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1420;
+				LastSwiftUpdateCheck = 1500;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					AADD2E6C2AF36D0100D66642 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AAEA95CF2AA0729200BF8E26;
+					};
+					AADD2E7B2AF36D5100D66642 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = AAEA95CF2AA0729200BF8E26;
+					};
 					AAEA95CF2AA0729200BF8E26 = {
 						CreatedOnToolsVersion = 14.2;
-					};
-					AAEA95DF2AA0729400BF8E26 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = AAEA95CF2AA0729200BF8E26;
-					};
-					AAEA95E92AA0729400BF8E26 = {
-						CreatedOnToolsVersion = 14.2;
-						TestTargetID = AAEA95CF2AA0729200BF8E26;
 					};
 				};
 			};
@@ -293,19 +313,35 @@
 			mainGroup = AAEA95C72AA0729200BF8E26;
 			packageReferences = (
 				AA8A90D02AA43C1B00E7B789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				AA5248332AF3550100C41022 /* XCRemoteSwiftPackageReference "ViewInspector" */,
+				AAD487632AF395C200B13D94 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */,
 			);
 			productRefGroup = AAEA95D12AA0729200BF8E26 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AAEA95CF2AA0729200BF8E26 /* laravel_mail */,
-				AAEA95DF2AA0729400BF8E26 /* laravel_mailTests */,
-				AAEA95E92AA0729400BF8E26 /* laravel_mailUITests */,
+				AADD2E6C2AF36D0100D66642 /* laravel_mailUITests */,
+				AADD2E7B2AF36D5100D66642 /* laravel_mailTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		AADD2E6B2AF36D0100D66642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADD2E7A2AF36D5100D66642 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAEA95CE2AA0729200BF8E26 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,24 +353,32 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAEA95DE2AA0729400BF8E26 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAEA95E82AA0729400BF8E26 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		9D2A4225FC623B89D62BF39D /* [CP] Check Pods Manifest.lock */ = {
+		5FD61998D42284E14A7F5301 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-laravel_mail-laravel_mailUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		71E815B8126371984C190D4C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -378,31 +422,26 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E474E34E085057205C0C0D81 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-laravel_mail-laravel_mailUITests-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		AADD2E692AF36D0100D66642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADD2E702AF36D0100D66642 /* laravel_mailUITests.swift in Sources */,
+				AADD2E722AF36D0100D66642 /* laravel_mailUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AADD2E782AF36D5100D66642 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AADD2E7F2AF36D5200D66642 /* laravel_mailTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		AAEA95CC2AA0729200BF8E26 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -417,39 +456,119 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		AAEA95DC2AA0729400BF8E26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAEA95E52AA0729400BF8E26 /* laravel_mailTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		AAEA95E62AA0729400BF8E26 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				AAEA95EF2AA0729400BF8E26 /* laravel_mailUITests.swift in Sources */,
-				AAEA95F12AA0729400BF8E26 /* laravel_mailUITestsLaunchTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		AAEA95E22AA0729400BF8E26 /* PBXTargetDependency */ = {
+		AADD2E742AF36D0100D66642 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AAEA95CF2AA0729200BF8E26 /* laravel_mail */;
-			targetProxy = AAEA95E12AA0729400BF8E26 /* PBXContainerItemProxy */;
+			targetProxy = AADD2E732AF36D0100D66642 /* PBXContainerItemProxy */;
 		};
-		AAEA95EC2AA0729400BF8E26 /* PBXTargetDependency */ = {
+		AADD2E812AF36D5200D66642 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AAEA95CF2AA0729200BF8E26 /* laravel_mail */;
-			targetProxy = AAEA95EB2AA0729400BF8E26 /* PBXContainerItemProxy */;
+			targetProxy = AADD2E802AF36D5200D66642 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		AADD2E752AF36D0100D66642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E049C9CC5FC13EE1C923746 /* Pods-laravel_mail-laravel_mailUITests.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56WF938799;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = laravel_mail;
+			};
+			name = Debug;
+		};
+		AADD2E762AF36D0100D66642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5DCDE4165B24AAA2FD142098 /* Pods-laravel_mail-laravel_mailUITests.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56WF938799;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = laravel_mail;
+			};
+			name = Release;
+		};
+		AADD2E832AF36D5200D66642 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B49BD37F6B4B1539661EF051 /* Pods-laravel_mailTests.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56WF938799;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/laravel_mail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/laravel_mail";
+			};
+			name = Debug;
+		};
+		AADD2E842AF36D5200D66642 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C42A9E5E10C44F24740801F /* Pods-laravel_mailTests.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 56WF938799;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/laravel_mail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/laravel_mail";
+			};
+			name = Release;
+		};
 		AAEA95F22AA0729400BF8E26 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -484,6 +603,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
@@ -494,6 +614,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -545,9 +666,11 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -557,6 +680,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -576,6 +700,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"laravel_mail/Preview Content\"";
 				DEVELOPMENT_TEAM = 2TRZH33AS7;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "laravel-mail-Info.plist";
@@ -590,6 +715,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-mail.laravel-mail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -613,6 +739,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"laravel_mail/Preview Content\"";
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 2TRZH33AS7;
+				ENABLE_ONLY_ACTIVE_RESOURCES = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "laravel-mail-Info.plist";
@@ -627,6 +754,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ios-mail.laravel-mail";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -637,89 +765,27 @@
 			};
 			name = Release;
 		};
-		AAEA95F82AA0729500BF8E26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B49BD37F6B4B1539661EF051 /* Pods-laravel_mailTests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56WF938799;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/laravel_mail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/laravel_mail";
-			};
-			name = Debug;
-		};
-		AAEA95F92AA0729500BF8E26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6C42A9E5E10C44F24740801F /* Pods-laravel_mailTests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56WF938799;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/laravel_mail.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/laravel_mail";
-			};
-			name = Release;
-		};
-		AAEA95FB2AA0729500BF8E26 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1E049C9CC5FC13EE1C923746 /* Pods-laravel_mail-laravel_mailUITests.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56WF938799;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = laravel_mail;
-			};
-			name = Debug;
-		};
-		AAEA95FC2AA0729500BF8E26 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5DCDE4165B24AAA2FD142098 /* Pods-laravel_mail-laravel_mailUITests.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 56WF938799;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "ios-mail.laravel-mailUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = laravel_mail;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		AADD2E772AF36D0100D66642 /* Build configuration list for PBXNativeTarget "laravel_mailUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADD2E752AF36D0100D66642 /* Debug */,
+				AADD2E762AF36D0100D66642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AADD2E822AF36D5200D66642 /* Build configuration list for PBXNativeTarget "laravel_mailTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AADD2E832AF36D5200D66642 /* Debug */,
+				AADD2E842AF36D5200D66642 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		AAEA95CB2AA0729200BF8E26 /* Build configuration list for PBXProject "laravel_mail" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -738,33 +804,31 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AAEA95F72AA0729500BF8E26 /* Build configuration list for PBXNativeTarget "laravel_mailTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AAEA95F82AA0729500BF8E26 /* Debug */,
-				AAEA95F92AA0729500BF8E26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		AAEA95FA2AA0729500BF8E26 /* Build configuration list for PBXNativeTarget "laravel_mailUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AAEA95FB2AA0729500BF8E26 /* Debug */,
-				AAEA95FC2AA0729500BF8E26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		AA5248332AF3550100C41022 /* XCRemoteSwiftPackageReference "ViewInspector" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/nalexn/ViewInspector";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.8;
+			};
+		};
 		AA8A90D02AA43C1B00E7B789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 9.0.0;
+			};
+		};
+		AAD487632AF395C200B13D94 /* XCRemoteSwiftPackageReference "swift-async-algorithms" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-async-algorithms.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -779,6 +843,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = AA8A90D02AA43C1B00E7B789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		AAD487642AF6AAB700B13D94 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA8A90D02AA43C1B00E7B789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		AAD487662AF6AAB700B13D94 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AA8A90D02AA43C1B00E7B789 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

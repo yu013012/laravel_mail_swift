@@ -15,7 +15,7 @@ struct Register: View {
     init() {
         let navigationBarAppearance = UINavigationBarAppearance()
         navigationBarAppearance.configureWithOpaqueBackground()
-        navigationBarAppearance.backgroundColor = UIColor.gray
+        navigationBarAppearance.backgroundColor = UIColor.blue
         navigationBarAppearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font : UIFont.systemFont(ofSize: 30)]
         //navigationBarAppearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white, .font : UIFont.systemFont(ofSize: 40, weight: .bold)]
         UINavigationBar.appearance().standardAppearance = navigationBarAppearance
@@ -26,64 +26,149 @@ struct Register: View {
     var body: some View {
         NavigationView {
             VStack {
-                Text("新規登録").font(.system(size: 40)).padding(.bottom, 50)
-                
-                TextField("名前", text: $model.name)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                    .autocapitalization(.none)
-                
-                TextField("メールアドレス", text: $model.mail)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                    .autocapitalization(.none)
-                
-                SecureField("パスワード", text: $model.password)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                
-                SecureField("確認用パスワード", text: $model.password_confirm)
-                    .padding()
-                    .background(Color.gray.opacity(0.2))
-                    .cornerRadius(10)
-                    .padding(.horizontal, 20)
-                
-                NavigationLink(destination: Mail(), isActive: $model.isRegister) {
-                    Button(action: {
-                        model.fetchData(apiFlg: "register")
-                    }) {
-                        HStack {
-                            Spacer()
-                            Text("新規登録")
-                                .foregroundColor(.white)
-                                .font(.headline)
-                            Spacer()
-                        }
+                ScrollView {
+                    Text("ユーザーログイン")
+                        .font(.largeTitle)
+                        // 枠線の前のpaddingは枠線の中身
                         .padding()
-                        .background(Color.gray)
-                        .cornerRadius(10)
+                        // 横いっぱい
+                        .frame(maxWidth: .infinity)
+                        .background(
+                            // 枠線、角10、色青、太さ8
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 6)
+                        )
+                        .foregroundColor(Color.blue)
+                        // 外のpaddingは枠線の外
                         .padding(.horizontal, 20)
+                        .padding(.top, 50)
+                    
+                    Text("名前")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color.blue)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 50)
+                    
+                    TextField("名前", text: $model.name)
+                        .padding()
+                        // 重ね表示形式で背景色指定
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.gray.opacity(0.2))
+                        )
+                        // 背景で枠線指定
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
+                        .autocapitalization(.none)
+                    
+                    Text("ID")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color.blue)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 25)
+                    
+                    TextField("メールアドレス", text: $model.mail)
+                        .padding()
+                        // 重ね表示形式で背景色指定
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.gray.opacity(0.2))
+                        )
+                        // 背景で枠線指定
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
+                        .autocapitalization(.none)
+                    
+                    Text("パスワード")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color.blue)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 25)
+                    
+                    SecureField("パスワード", text: $model.password)
+                        .padding()
+                        // 重ね表示形式で背景色指定
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.gray.opacity(0.2))
+                        )
+                        // 背景で枠線指定
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
+                        .autocapitalization(.none)
+                    
+                    Text("確認パスワード")
+                        .font(.title)
+                        .frame(maxWidth: .infinity, alignment: .leading)
+                        .foregroundColor(Color.blue)
+                        .padding(.horizontal, 20)
+                        .padding(.top, 25)
+                    
+                    SecureField("確認用パスワード", text: $model.password_confirm)
+                        .padding()
+                        // 重ね表示形式で背景色指定
+                        .background(
+                            RoundedRectangle(cornerRadius: 10)
+                                .fill(Color.gray.opacity(0.2))
+                        )
+                        // 背景で枠線指定
+                        .overlay(
+                            RoundedRectangle(cornerRadius: 10)
+                                .stroke(Color.blue, lineWidth: 2)
+                        )
+                        .padding(.horizontal, 20)
+                        .autocapitalization(.none)
+                    
+                    NavigationLink(destination: Mail(), isActive: $model.isRegister) {
+                        Button(action: {
+                            model.fetchData(apiFlg: "register")
+                        }) {
+                            HStack {
+                                Spacer()
+                                Text("新規登録")
+                                    .foregroundColor(.white)
+                                    .font(.headline)
+                                Spacer()
+                            }
+                            .padding()
+                            .background(Color.yellow)
+                            .cornerRadius(10)
+                            .padding(.horizontal, 20)
+                        }
+                        .padding(.top, 50)
                     }
-                    .padding(.top, 20)
+                    
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }) {
+                        Text("戻る")
+                            .font(.system(size: 16))
+                            .foregroundColor(.gray)
+                            .padding(.top, 10)
+                    }
+                    
                 }
-                
-                Button(action: {
-                    presentationMode.wrappedValue.dismiss()
-                }) {
-                    Text("戻る")
-                        .font(.system(size: 16))
-                        .foregroundColor(.gray) // テキストの色を変更する
-                        .padding(.top, 10)
-                }
-                
+                .navigationBarTitle("メール連絡網", displayMode: .inline)
+                Image("logo") // 画像名を指定
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(height: 100)
+                    .edgesIgnoringSafeArea(.all)
             }
-            .navigationBarTitle("メール連絡網", displayMode: .inline)
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .edgesIgnoringSafeArea(.bottom)
         }
         .navigationBarHidden(true)
     }
